@@ -1,0 +1,23 @@
+// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Media mixin's
+@mixin landscape () {
+  @media  (orientation:landscape) {
+    @content;
+  }
+}
+@mixin portrait () {
+  @media  (orientation:portrait) {
+    @content;
+  }
+}

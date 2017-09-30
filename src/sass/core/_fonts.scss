@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800');
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icons/icomoon.eot');
+  src:  url('../fonts/icons/icomoon.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/icons/icomoon.ttf') format('truetype'),
+  url('../fonts/icons/icomoon.woff') format('woff'),
+  url('../fonts/icons/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"], .icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  line-height: 1;
+  color: $black;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chat:before {
+  content: "\e900";
+}
+.icon-back:before {
+  content: "\e901";
+}
+.icon-camera:before {
+  content: "\e902";
+}
+.icon-edit:before {
+  content: "\e903";
+}
+.icon-menu:before {
+  content: "\e904";
+}
+.icon-phone:before {
+  content: "\e905";
+}
+.icon-search:before {
+  content: "\e906";
+}
+.icon-trash:before {
+  content: "\e907";
+}
+.icon-close:before {
+  content: "\e90c";
+}

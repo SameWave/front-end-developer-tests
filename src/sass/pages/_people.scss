@@ -1,0 +1,158 @@
+.toolbar {
+  position: relative;
+  height: 50px;
+  background: $grey-light;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 10px;
+
+  .search {
+    width: 100%;
+    box-sizing: border-box;
+
+
+    .search-toggle {
+      @extend .icon-search;
+      position: absolute;
+      z-index: 4;
+      left: 50%;
+      cursor: pointer;
+      color: $blue;
+      top: 16px;
+      transform: translateX(-50%);
+    }
+    .form-control {
+      width: 100%;
+      padding-right: 30px;
+      position: relative;
+      z-index: 3;
+      background: $grey-light;
+      display: none;
+      padding-bottom: 0;
+      padding-left: 0;
+      border-bottom: 1px solid $grey-dark;
+      height: 40px;
+    }
+
+
+
+    &.opened {
+      position: relative;
+
+      .search-toggle {
+        left: auto;
+        right: 0;
+        transform: none;
+        @extend .icon-close;
+      }
+
+      .form-control {
+        display: block;
+      }
+    }
+  }
+
+  .edit {
+    .btn {
+      font-weight: normal;
+      color: $grey-dark;
+    }
+  }
+}
+
+.user-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .card-list {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .card {
+      display: block;
+      width: 100%;
+      height: 82px;
+      background: $white;
+      box-sizing: border-box;
+      padding: 12px 50px 12px 92px;
+      position: relative;
+      order: 2;
+      border-bottom: 2px solid $grey;
+
+      .card-content {
+        text-decoration: none;
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .avatar {
+          position: absolute;
+          top: 12px;
+          left: 15px;
+          width: 60px;
+          height: 60px;
+        }
+        
+        .name {
+          color: $black;
+          display: block;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        
+        .position {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .remove {
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $red;
+        cursor: pointer;
+      }
+      
+      &.visible ~ .letter{
+        display: block;
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    .letter {
+      display: none;
+      order: 1;
+      padding: 15px 10px;
+      font-weight: 800;
+    }
+  }
+
+  .no_results {
+    display: none;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  &.editable {
+    .card {
+      .remove {
+        display: block;
+      }
+    }
+  }
+}
