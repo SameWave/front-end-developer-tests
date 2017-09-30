@@ -21,8 +21,8 @@ $(function isMobile() {
 		} else $('body').addClass('desktop');
 });
 
-
 function ApplyOrientationStyle() {
+	iH = window.innerHeight;
 	vw = $(window).width();
 	vh = $(window).height();
 	if ((vw>vh) && ($('body').hasClass('mobile'))) {
@@ -33,6 +33,8 @@ function ApplyOrientationStyle() {
 		$('body').removeClass('landscape');
 		$('body').addClass('portrait');
 	}
+	//fix 100% height for scaled page
+	$("main").css("min-height", iH*2);
 }
 
 ApplyOrientationStyle();
@@ -40,3 +42,4 @@ ApplyOrientationStyle();
 window.addEventListener("orientationchange", function() {
 	ApplyOrientationStyle();
 }, false);
+

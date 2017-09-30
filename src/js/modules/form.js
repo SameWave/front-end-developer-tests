@@ -1,9 +1,9 @@
 function check(input) {
 	if (input.validity) {
 		if (input.validity.valid === true) {
-			input.classList.remove("error");
+			input.parentElement.classList.remove("error");
 		} else {
-			input.classList.add("error");
+			input.parentElement.classList.add("error");
 		}
 	}
 	console.log(input.checkValidity());

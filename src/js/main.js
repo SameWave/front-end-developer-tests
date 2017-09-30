@@ -6,6 +6,7 @@
 
 //= modules/viewport.js
 //= modules/form.js
+//= modules/mask.js
 
 jQuery(document).ready(function($) {
   //= modules/search.js

@@ -9,14 +9,19 @@
   //padding: 11px 22px 11px 22px;
   box-sizing: border-box;
   //height: 64px;
-  font-size: 16px;
   color: $black;
-  padding: 8px 22px 8px 22px;
-  height: 50px;
-  line-height: 50px;
+  padding: 0 0 0 0;
+  letter-spacing: -1px;
+  height: 46px;
+  padding-top: 0px;
+  padding-bottom: 14px;
+  margin-bottom: 0px;
+  line-height: 1px;
+  font-size: 32px;
   display: block;
   width: 100%;
   border-radius: 0;
+  height: 46px;
   //border-bottom: 1px solid $border-color;
   //transition: $transition-fast;
   //font-weight: $font-weight-thin;
@@ -26,7 +31,9 @@
     height:48px;
     padding-left: 21px;
   }*/
-
+  &[type="tel"]{
+    letter-spacing: 1px;
+  }
   &.bordered {
     border: 1px solid $grey-light;
   }
@@ -66,16 +73,18 @@
     text-align: center;
   }
 
-  .form-control.error {
+  &.error {
+    legend {
+      color: $red;
+    }
+    border-bottom-color: $red;
+  }
+
+  .form-control {
     outline: none;
     //box-shadow: none;
     //background: $red-lighter;
     //border-color: red;
-    box-shadow: 0 1px 0 0 $red;
-    
-    &~.legend {
-      color: $red;
-    }
   }
 
   .field-validation-error {
@@ -336,51 +345,43 @@
   display: inline-block;
   cursor: pointer;
   overflow: hidden;
-  height:40px;
-  width: 60px;
+  padding-top: 13px;
 
   input {
     display: none;
 
     &:checked {
       &~.fake-switch {
-        transform: translateX(40px)
+        background: $green;
+
+        &:after {
+          left: calc(100% - 42px);
+        }
       }
     }
   }
   .fake-switch {
+    height: 30px;
+    width: 80px;
+    background: $grey-dark;
+    transition: $transition-fast;
+    transition-timing-function: ease-in-out;
     box-sizing: border-box;
     display: inline-block;
-    vertical-align: -4px;
-    width: 20px;
-    height: 20px;
-    background: green;
-    transition: $transition-fast;
-    border: 1px solid $grey;
-    color: #fff;
     position: relative;
-
-    &:before {
-      content: '';
-      height: 20px;
-      position: absolute;
-      top:5px;
-      width: 30px;
-      background: $green;
-      right: 50%;
-      border-radius: 10px 0 0 10px;
-    }
+    border-radius: 15px;
 
     &:after {
       content: '';
-      height: 20px;
+      height: 38px;
       background: #fff;
-      width: 20px;
+      transition: $transition-fast;
+      border: 2px solid $blue;
+      width: 38px;
       border-radius: 50%;
-      left: 50%;
-      margin-left: -10px;
+      margin-top: -6px;
+      left: 0;
       position: absolute;
-      top:5px;
     }
   }
 }
@@ -485,3 +486,17 @@
   }
 }
 */
+
+//mask
+.shell {
+  position: relative;
+  line-height: 1;
+  span {
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    color: red;
+    pointer-events: none;
+    z-index: -1;
+  }
+}

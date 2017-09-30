@@ -3,12 +3,13 @@ html, body {
 	position: relative;
 	width: 100%;
 	max-width: 100%;
-	font-size: 18px;
-	line-height: 24px;
+	font-size: 32px;
+	line-height: 40px;
 	box-sizing: border-box;
 	color: $black;
 	word-break: break-word;
 	background: $grey-light;
+	min-width: 640px;
 }
 
 main {
@@ -16,12 +17,8 @@ main {
 	box-sizing: border-box;
 	z-index: 2;
 	min-width: 640px;
-	padding-top: 52px;
+	padding-top: 100px;
 	@extend .container;
-
-	@include landscape {
-		min-width: 100vh;
-	}
 }
 
 .bg-white {
@@ -45,19 +42,19 @@ main {
 
 .avatar {
 	overflow: hidden;
-	border: 2px solid #fff;
+	border: 4px solid #fff;
 	box-sizing: border-box;
 	border-radius: 50%;
 	background: $grey;
 
 	&.green {
-		box-shadow: 0 0 0 3px $green;
+		box-shadow: 0 0 0 4px $green;
 	}
 	&.red {
-		box-shadow: 0 0 0 3px $red;
+		box-shadow: 0 0 0 4px $red;
 	}
 	&.yellow {
-		box-shadow: 0 0 0 3px $yellow;
+		box-shadow: 0 0 0 4px $yellow;
 	}
 	img {
 		display: block;

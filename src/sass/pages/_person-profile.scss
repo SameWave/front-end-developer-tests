@@ -1,5 +1,5 @@
 .hero {
-  height: 155px;
+  height: 300px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -10,24 +10,25 @@
 
   .avatar {
     display: inline-block;
-    width: 85px;
-    height: 85px;
-    margin-top: -44px;
-    margin-bottom: 20px;
+    width: 148px;
+    height: 148px;
+    margin-bottom: -50px;
+    transform: translateY(-50%);
   }
 
   .name {
-    font-size: 30px;
+    font-size: 47px;
     margin-bottom: 20px;
   }
 
   .position {
     margin-bottom: 40px;
+    font-size: 30px;
   }
 
   .blocks {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     @include clearfix;
 
     .action {
@@ -35,23 +36,34 @@
       position: relative;
       display: block;
       width: calc(100% / 3);
-      height: 70px;
+      height: 136px;
       text-decoration: none;
       box-sizing: border-box;
 
       .title {
         display: block;
         text-transform: uppercase;
-        font-size: 14px;
         color: $grey-dark;
-        margin-bottom: 20px;
+        padding-top: 11px;
+        margin-bottom: 12px;
+        font-weight: 600;
+        font-size: 24px;
       }
 
       .text-info {
-        font-size: 20px;
+        font-size: 64px;
+        height: 64px;
+        line-height: 45px;
+        vertical-align: baseline;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
         
         i {
           color: $blue;
+          font-size: 40px;
+          vertical-align: 2px;
         }
       }
 
@@ -93,38 +105,56 @@
 }
 
 .persons {
-  padding-top: 30px;
+  padding: 26px 40px 0;
   font-size: 0;
+  background: $grey-light;
+  border-bottom: 1px solid $grey-dark;
   @include clearfix;
 
   .title {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 800;
     margin-bottom: 20px;
   }
 
   .person {
     width: 50%;
-    max-width: 175px;
+    max-width: 280px;
     display: inline-block;
+    vertical-align: top;
     font-size: 18px;
     text-decoration: none;
     color: $black;
 
     .avatar {
+      transform: none;
       margin-top: 0;
-      height: 50px;
-      width: 50px;
+      height: 74px;
+      width: 74px;
+      margin-bottom: 5px;
     }
 
     .name {
-      font-size: 16px;
-      margin-bottom: 0;
+      font-size: 28px;
+      line-height: 30px;
+      margin-bottom: 3px;
     }
 
     .position {
-      font-size: 14px;
+      font-size: 28px;
     }
+  }
+
+  &+.persons {
+    padding-top: 30px;
+
+    .title {
+      margin-bottom: 30px;
+    }
+  }
+
+  &:last-of-type {
+    border: none;
   }
 }
