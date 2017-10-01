@@ -1,4 +1,4 @@
-// Clearfix
+//clearfix
 @mixin clearfix() {
   &:before,
   &:after {
@@ -10,17 +10,7 @@
   }
 }
 
-// Media mixin's
-@mixin landscape () {
-  @media  (orientation:landscape) {
-    @content;
-  }
-}
-@mixin portrait () {
-  @media  (orientation:portrait) {
-    @content;
-  }
-}
+//media
 @mixin mobile () {
   @media  (max-width: $sm) {
     @content;

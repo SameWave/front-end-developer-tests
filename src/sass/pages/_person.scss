@@ -9,6 +9,7 @@
     margin-bottom: 20px;
   }
 }
+
 .upload {
   color: $blue;
   text-align: center;
@@ -44,6 +45,7 @@
     top: 17%;
   }
 }
+
 .form {
   fieldset {
     display: flex;
@@ -54,19 +56,6 @@
     margin: 0 0 3px 0;
     padding: 0 20px;
     border-bottom: 1px solid $grey;
-    
-    .form-control:required {
-      &~legend {
-        &:after {
-          content: '∗';
-          vertical-align: top;
-          line-height: 28px;
-          display: inline-block;
-          font-size: 28px;
-          margin-left: 6px;
-        }
-      }
-    }
 
     legend {
       order: -1;
@@ -77,6 +66,21 @@
       text-transform: uppercase;
       font-weight: 800;
       box-sizing: border-box;
+    }
+    
+    .form-control {
+      &:required {
+        &~legend {
+          &:after {
+            content: '∗';
+            vertical-align: top;
+            line-height: 28px;
+            display: inline-block;
+            font-size: 28px;
+            margin-left: 6px;
+          }
+        }
+      }
     }
 
     .description {
@@ -89,7 +93,7 @@
         padding-top: 18px;
       }
     }
-    
+
     .label {
       color: $blue;
       right: 19px;
@@ -115,6 +119,7 @@
     }
   }
 }
+
 .profile-delete {
   border-bottom: 1px solid $grey;
   color: $red;
@@ -136,6 +141,7 @@
     margin-right: 2px;
   }
 }
+
 .profile-since {
   padding: 50px 20px 59px;
   color: $grey-dark;
