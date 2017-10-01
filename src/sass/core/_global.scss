@@ -18,6 +18,17 @@ main {
 	min-width: 640px;
 	padding-top: 100px;
 	@extend .container;
+
+	@include landscape {
+		transform: scale(calc(9 / 16)); //most popular ratio
+		transform-origin: center top;
+		padding-top: 107px;
+
+		@include ratio-4-3 {
+			padding-top: 80px;
+			transform: scale(calc(3 / 4));;
+		}
+	}
 }
 
 .bg-white {

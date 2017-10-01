@@ -10,9 +10,28 @@ header {
   text-align: center;
   padding: 25px 10px 0;
   box-sizing: border-box;
+
+  @include landscape {
+    height: 60px;
+    padding-top: 17px;
+
+    @include ratio-4-3 {
+      height: 60px;
+      padding-top: 12px;
+    }
+  }
   
   .container {
     position: relative;
+
+    @include landscape {
+      transform: scale(calc(9 / 16));
+      transform-origin: center top;
+
+      @include ratio-4-3 {
+        transform: scale(calc(3 / 4));;
+      }
+    }
   }
 
   h1 {

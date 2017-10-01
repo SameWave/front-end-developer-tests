@@ -118,7 +118,7 @@
       height: 110px;
       background: $white;
       box-sizing: border-box;
-      padding: 21px 60px 20px 125px;
+      padding: 21px 75px 20px 125px;
       position: relative;
       order: 2;
       border-bottom: 2px solid $grey;
@@ -161,7 +161,7 @@
       .remove {
         display: none;
         position: absolute;
-        right: 20px;
+        right: 30px;
         top: 50%;
         transform: translateY(-50%);
         color: $red;
