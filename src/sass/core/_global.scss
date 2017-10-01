@@ -1,0 +1,80 @@
+html, body {
+	font-family: $font-base;
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	font-size: 32px;
+	line-height: 40px;
+	box-sizing: border-box;
+	color: $black;
+	background: $grey-light;
+	min-width: 640px;
+	word-break: break-word;
+}
+
+main {
+	position: relative;
+	box-sizing: border-box;
+	z-index: 2;
+	min-width: 640px;
+	padding-top: 100px;
+	@extend .container;
+
+	@include landscape {
+		transform: scale(calc(9 / 16)); //most popular ratio
+		transform-origin: center top;
+		padding-top: 107px;
+
+		@include ratio-4-3 {
+			padding-top: 80px;
+			transform: scale(calc(3 / 4));;
+		}
+	}
+}
+
+.bg-white {
+	background-color: $white!important;
+}
+.bg-grey {
+	 background-color: $grey-light!important;
+ }
+.text-info {
+	color: $blue!important;
+}
+.pull-right {
+	float: right!important;
+}
+.pull-left {
+	float: left!important;
+}
+.hidden {
+	display: none!important;
+}
+
+.avatar {
+	overflow: hidden;
+	border: 4px solid #fff;
+	box-sizing: border-box;
+	border-radius: 50%;
+	background: $grey;
+
+	&.green {
+		box-shadow: 0 0 0 4px $green;
+	}
+	&.red {
+		box-shadow: 0 0 0 4px $red;
+	}
+	&.yellow {
+		box-shadow: 0 0 0 4px $yellow;
+	}
+	img {
+		display: block;
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+.position {
+	color: $grey-dark;
+	font-weight: 300;
+}

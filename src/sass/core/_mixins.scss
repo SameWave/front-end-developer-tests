@@ -1,0 +1,28 @@
+//clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//media
+@mixin mobile () {
+  @media  (max-width: $sm) {
+    @content;
+  }
+}
+@mixin landscape () {
+  @media  (orientation: landscape) {
+    @content;
+  }
+}
+@mixin ratio-4-3 () {
+  @media  (max-aspect-ratio: 4/3) {
+    @content;
+  }
+}

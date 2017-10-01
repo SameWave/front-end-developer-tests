@@ -1,0 +1,205 @@
+.toolbar {
+  position: relative;
+  height: 75px;
+  background: $grey-light;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 20px;
+
+  @include mobile {
+    height: 80px;
+    padding-top: 10px;
+  }
+
+  .search {
+    width: 100%;
+    box-sizing: border-box;
+
+
+    .search-toggle {
+      @extend .icon-search;
+      position: absolute;
+      z-index: 4;
+      left: 50%;
+      cursor: pointer;
+      color: $blue;
+      top: 24px;
+      transform: translateX(-50%);
+
+      @include mobile {
+        top: 34px;
+      }
+    }
+    .form-control {
+      width: 100%;
+      padding-right: 30px;
+      font-size: 28px;
+      line-height: 60px;
+      position: relative;
+      z-index: 3;
+      background: $grey-light;
+      display: none;
+      padding-bottom: 0;
+      padding-left: 0;
+      border-bottom: 1px solid $grey-dark;
+      height: 65px;
+      padding-top: 15px;
+
+      &:-ms-input-placeholder {
+        color: $grey;
+        font-size: 28px;
+        line-height: 60px;
+      }
+
+      &::-moz-placeholder {
+        color: $grey;
+        font-size: 28px;
+        line-height: 60px;
+      }
+
+      &::-webkit-input-placeholder {
+        color: $grey-dark;
+        font-size: 28px;
+        line-height: 60px;
+        opacity: 0.5;
+      }
+    }
+
+
+
+    &.opened {
+      position: relative;
+
+      .search-toggle {
+        left: auto;
+        right: 0;
+        transform: none;
+        @extend .icon-close;
+
+        @include mobile {
+          top: 24px;
+        }
+      }
+
+      .form-control {
+        display: block;
+      }
+    }
+  }
+
+  .edit {
+    .btn {
+      font-weight: normal;
+      color: $grey-dark;
+      height: 75px;
+      font-size: 28px;
+      line-height: 80px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+}
+
+.user-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .card-block {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .card {
+      display: block;
+      width: 100%;
+      height: 110px;
+      background: $white;
+      box-sizing: border-box;
+      padding: 21px 75px 20px 125px;
+      position: relative;
+      order: 2;
+      border-bottom: 2px solid $grey;
+
+      .card-content {
+        text-decoration: none;
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        line-height: 34px;
+
+        .avatar {
+          position: absolute;
+          top: 18px;
+          left: 25px;
+          width: 75px;
+          height: 75px;
+        }
+        
+        .name {
+          color: $black;
+          display: block;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 29px;
+        }
+        
+        .position {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 24px;
+        }
+      }
+
+      .remove {
+        display: none;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $red;
+        cursor: pointer;
+      }
+      
+      &.visible ~ .letter{
+        display: block;
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    .letter {
+      display: none;
+      order: 1;
+      padding: 20px 18px 10px;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 50px;
+    }
+  }
+
+  .no_results {
+    display: none;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  &.editable {
+    .card {
+      .remove {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.profile-edit {
+  header {
+    .icon-menu {
+      display: none;
+    }
+  }
+
+  .avatar {
+    margin-bottom: 20px;
+  }
+}
+
+.upload {
+  color: $blue;
+  text-align: center;
+  margin: 0 auto;
+  width: 142px;
+  height: 142px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+
+  i {
+    font-size: 72px;
+    color: $blue;
+    text-align: center;
+  }
+  
+  .text {
+    display: block;
+    width: 100%;
+    font-size: 19px;
+    line-height: 24px;
+    padding-bottom: 12px;
+  }
+  input {
+    display: none;
+  }
+
+  .hero & {
+    position: relative;
+    top: 17%;
+  }
+}
+
+.form {
+  fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border: none;
+    text-align: left;
+    margin: 0 0 3px 0;
+    padding: 0 20px;
+    border-bottom: 1px solid $grey;
+
+    legend {
+      order: -1;
+      width: 100%;
+      text-align: left;
+      font-size: 24px;
+      color: $grey-dark;
+      text-transform: uppercase;
+      font-weight: 800;
+      box-sizing: border-box;
+    }
+    
+    .form-control {
+      &:required {
+        &~legend {
+          &:after {
+            content: '∗';
+            vertical-align: top;
+            line-height: 28px;
+            display: inline-block;
+            font-size: 28px;
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+
+    .description {
+      padding-top: 10px;
+      padding-bottom: 8px;
+      font-size: 19px;
+      color: $grey-dark;
+
+      &~legend {
+        padding-top: 18px;
+      }
+    }
+
+    .label {
+      color: $blue;
+      right: 19px;
+      letter-spacing: 0.5px;
+      position: absolute;
+
+      &.top {
+        top: 13px;
+      }
+
+      &.bottom {
+        bottom: 10px;
+      }
+    }
+
+    &.admin-access {
+      margin-bottom: 0;
+      border-bottom: none;
+
+      .description {
+        padding-top: 30px;
+      }
+    }
+  }
+}
+
+.profile-delete {
+  border-bottom: 1px solid $grey;
+  color: $red;
+  padding: 30px 20px 37px;
+  text-align: left;
+
+  .title {
+    display: inline-block;
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+  
+  i {
+    float: right;
+    color: $red;
+    cursor: pointer;
+    font-size: 40px;
+    line-height: 50px;
+    margin-right: 2px;
+  }
+}
+
+.profile-since {
+  padding: 50px 20px 59px;
+  color: $grey-dark;
+  font-size: 22px;
+}

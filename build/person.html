@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+		<meta charset="utf-8">
+
+		<title>Test App</title>
+
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+
+		<!-- Mobile-friendly viewport -->
+		<meta name="viewport" content="width=device-width, user-scalable=yes">
+
+		<!-- Turn off "smart" recognition phone number -->
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="x-rim-auto-match" content="none">
+
+		<!-- Style sheet link -->
+		<link href="css/main.css" rel="stylesheet" media="all">
+
+		<!-- Font link -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet">
+</head>
+
+<body class="profile-edit">
+
+<header>
+  <div class="container">
+    <a href="person-profile.html" class="icon-back btn btn-default pull-left"></a>
+    <button class="icon-menu btn btn-default pull-right"></button>
+    <h1>Profile</h1>
+  </div>
+</header>
+
+<main>
+    <div class="hero">
+      <label class="upload">
+        <i class="icon-camera"></i>
+        <span class="text">Add Wallpaper</span>
+        <input type="file">
+      </label>
+    </div>
+    <div class="profile">
+      <div class="avatar green">
+        <label class="upload">
+          <i class="icon-camera"></i>
+          <span class="text">Add Photo</span>
+          <input type="file">
+        </label>
+      </div>
+      <form action="" class="form">
+        <fieldset class="form-group">
+          <input type="text" class="form-control" value="Marc" minlength="2" oninput="check(this)" required>
+          <legend>first name</legend>
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="text" class="form-control" value="Houston" minlength="2" oninput="check(this)" required>
+          <legend>last name</legend>
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="email" class="form-control" value="marchouston@tyrellcorp.com" minlength="5"  oninput="check(this)" required>
+          <legend>email</legend>
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="password" class="form-control" value="11111111" minlength="8" maxlength="36" oninput="check(this)" required>
+          <legend>password</legend>
+          <div class="label bottom">
+            Choose new
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <input id="phone-work" type="tel" class="form-control masked" placeholder="XXX XXXX XXXX" pattern="\d{3} \d{4} \d{4}" value="020 7111 2222">
+          <legend>work phone</legend>
+        </fieldset>
+        <fieldset class="form-group">
+          <input id="phone-mobile" type="tel" class="form-control masked" placeholder="XXXXX XXX XXX" pattern="\d{5} \d{3} \d{3}" value="07940 729 456">
+          <legend>mobile phone</legend>
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="text" class="form-control" value="Sales Director">
+          <legend>job title</legend>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="description">Managers can access their teams, streams & details</div>
+          <legend>manager</legend>
+          <div class="label top">
+            Set this persons manager
+          </div>
+        </fieldset>
+        <fieldset class="form-group admin-access">
+          <div class="description">Admins can access everyone's tasks, streams & details</div>
+          <legend>enable admin access</legend>
+          <div class="label top">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="fake-switch"></span>
+            </label>
+          </div>
+        </fieldset>
+      </form>
+      <div class="profile-delete bg-grey">
+        <div class="title">
+          Delete account
+        </div>
+        <i class="icon-trash"></i>
+      </div>
+      <div class="profile-since bg-grey">Member since Jan 22, 2015</div>
+    
+    </div>
+</main>
+
+<!-- Javascript file source -->
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>

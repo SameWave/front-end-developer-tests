@@ -1,0 +1,16 @@
+// core styles
+@import "core/variables";
+@import "core/mixins";
+@import "core/normalize";
+@import "core/fonts";
+@import "core/grid";
+@import "core/ui";
+@import "core/global";
+
+//modules
+@import "modules/header";
+
+//page styles
+@import "pages/person";
+@import "pages/person-profile";
+@import "pages/people";

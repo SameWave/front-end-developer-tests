@@ -1,0 +1,140 @@
+//form inputs
+.form-control {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: $black;
+  padding: 0;
+  letter-spacing: -1px;
+  height: 46px;
+  padding-bottom: 14px;
+  margin-bottom: 0;
+  line-height: 1px;
+  font-size: 32px;
+  display: block;
+  width: 100%;
+  border-radius: 0;
+
+  &[type="tel"]{
+    letter-spacing: 1px;
+  }
+  &.bordered {
+    border: 1px solid $grey-light;
+  }
+  &.rounded {
+    border-radius: 40px;
+  }
+}
+.form-group {
+  position: relative;
+  padding-top: 20px;
+
+  &.error {
+    legend {
+      color: $red;
+    }
+    border-bottom-color: $red;
+  }
+}
+//buttons
+.btn {
+  outline: none;
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+  height: 52px;
+  line-height: 37px;
+  padding: 0 10px;
+  border-radius: 0;
+  text-transform: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: $font-base;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  transition: all .15s ease-out 0s;
+  color: $black;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+
+  &:hover, &:active, &:focus, &:active:focus  {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+    text-decoration: none;
+  }
+
+  //colors
+  &.btn-default {
+    background: $white;
+
+    &:active, &:focus, &:active:focus {
+      background: $white;
+    }
+  }
+}
+
+//switch box
+.switch {
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  padding-top: 13px;
+
+  input {
+    display: none;
+
+    &:checked {
+      &~.fake-switch {
+        background: $green;
+
+        &:after {
+          left: calc(100% - 42px);
+        }
+      }
+    }
+  }
+  .fake-switch {
+    height: 30px;
+    width: 80px;
+    background: $grey-dark;
+    transition: $transition-fast;
+    transition-timing-function: ease-in-out;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    border-radius: 15px;
+
+    &:after {
+      content: '';
+      height: 38px;
+      background: $white;
+      transition: $transition-fast;
+      border: 2px solid $blue;
+      width: 38px;
+      border-radius: 50%;
+      margin-top: -6px;
+      left: 0;
+      position: absolute;
+    }
+  }
+}
+
+//mask
+.shell {
+  position: relative;
+  line-height: 1;
+  span {
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    color: red;
+    z-index: -1;
+  }
+}
