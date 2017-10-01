@@ -58,12 +58,11 @@
     .form-control:required {
       &~legend {
         &:after {
-          content: '⚹';
+          content: '∗';
           vertical-align: top;
-          line-height: 31px;
+          line-height: 28px;
           display: inline-block;
-          font-size: 16px;
-          transform: rotate(90deg);
+          font-size: 28px;
           margin-left: 6px;
         }
       }

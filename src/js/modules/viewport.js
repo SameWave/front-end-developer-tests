@@ -19,6 +19,17 @@ $(function isMobile() {
 						 	else
 				 					$('body').addClass('unknown');
 		} else $('body').addClass('desktop');
+
+	var mobilePlatform = (/iPhone|iPad|ipod|android|blackberry|Linux armv7l|Linux aarch64/i.test(navigator.platform.toLowerCase()));
+
+	if (mobilePlatform) {
+		$('[name="viewport"]').remove()
+		$('head').append('<meta name="viewport" content="width=device-width, user-scalable=no">');
+
+		//fix 100% height for scaled page
+		$("main").css("min-height", iH*2);
+	}
+
 });
 
 function ApplyOrientationStyle() {
@@ -33,8 +44,6 @@ function ApplyOrientationStyle() {
 		$('body').removeClass('landscape');
 		$('body').addClass('portrait');
 	}
-	//fix 100% height for scaled page
-	$("main").css("min-height", iH*2);
 }
 
 ApplyOrientationStyle();
