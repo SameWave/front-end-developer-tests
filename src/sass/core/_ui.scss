@@ -56,7 +56,6 @@
   display: inline-block;
   transition: all .15s ease-out 0s;
   color: $black;
-  appearance: none;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -136,7 +135,6 @@
     left: 3px;
     top: 1px;
     color: red;
-    pointer-events: none;
     z-index: -1;
   }
 }
