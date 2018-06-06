@@ -1,4 +1,4 @@
-# Samewave Frontend Assessment
+# Samewave Basic Front-end Developer Assessment
 This test aims to assess your frontend proficiency and expertise level with regards to HTML5, CSS3 (using SASS) and JavaScript (core &amp; jQuery)
 
 ## Instructions
@@ -18,7 +18,7 @@ You should ideally be using SASS (a gulp task has been provided to compile your 
 You should preferably be using the BEM methodology for naming your classes.
 
 #### JavaScript
-You should write JavaScript that confirms to the ES6 (ECMAScript 2015) specification.  
+You should write JavaScript that conforms to the ES6 (ECMAScript 2015) specification.  
 You should preferably use core JavaScript, but the use of jQuery is permitted.   
 
 #### Device Support
