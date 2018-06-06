@@ -13,7 +13,7 @@ The component you are required to build is a simple prompt component that confor
 - A sticky prompt should only be dismissed if the user clicks on the confirmation button.
 - A disappearing prompt should also be dismissed if the user clicks on the overlay.
 
-You will find out mobile UI design specs at this URL: https://xd.adobe.com/spec/823b1bb3-4029-4d15-6434-149ac660adfe-f40a/#screen/fee5a626-1b7d-4c2d-90e3-1b70daa54fc7/Tip%20-%20Stream%20Editors
+You will find the mobile UI design specs at this URL: https://xd.adobe.com/spec/823b1bb3-4029-4d15-6434-149ac660adfe-f40a/#screen/fee5a626-1b7d-4c2d-90e3-1b70daa54fc7/Tip%20-%20Stream%20Editors
 
 All the relevant design information (dimensions, colour, typography etc) is available in the interactive design spec.
 
