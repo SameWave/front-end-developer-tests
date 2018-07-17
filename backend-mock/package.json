@@ -1,0 +1,16 @@
+{
+  "name": "backend-mock",
+  "version": "1.0.0",
+  "description": "Mock JSONAPI server for front-end tests",
+  "main": "server.js",
+  "repository": "https://github.com/SameWave/front-end-developer-tests/tree/master/backend-mock",
+  "author": "Samewave Devs",
+  "license": "UNLICENSED",
+  "private": false,
+  "dependencies": {
+    "jsonapi-server": "^4.2.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
