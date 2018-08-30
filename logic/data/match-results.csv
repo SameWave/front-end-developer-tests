@@ -1,0 +1,30 @@
+﻿Manchester United,2,Manchester City,1
+Manchester United,3,Liverpool,2
+Manchester United,1,Chelsea,3
+Manchester United,2,Tottenham Hotspur,1
+Manchester United,1,Arsenal,1
+Manchester City,0,Manchester United,2
+Liverpool,1,Manchester United,1
+Chelsea,3,Manchester United,2
+Tottenham Hotspur,2,Manchester United,2
+Arsenal,1,Manchester United,2
+Manchester City,0,Liverpool,0
+Manchester City,1,Chelsea,0
+Manchester City,2,Tottenham Hotspur,2
+Manchester City,2,Arsenal,3
+Liverpool,3,Manchester City,2
+Chelsea,1,Manchester City,1
+Tottenham Hotspur,0,Manchester City,1
+Arsenal,0,Manchester City,0
+Liverpool,1,Chelsea,0
+Liverpool,2,Tottenham Hotspur,1
+Liverpool,3,Arsenal,3
+Chelsea,1,Liverpool,1
+Tottenham Hotspur,0,Liverpool,2
+Arsenal,0,Liverpool,0
+Chelsea,1,Tottenham Hotspur,0
+Chelsea,2,Arsenal,0
+Tottenham Hotspur,2,Chelsea,1
+Arsenal,3,Chelsea,2
+Tottenham Hotspur,2,Arsenal,2
+Arsenal,1,Tottenham Hotspur,1
